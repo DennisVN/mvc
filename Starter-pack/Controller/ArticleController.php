@@ -2,8 +2,16 @@
 
 declare(strict_types = 1);
 
+include "config.php";
+
 class ArticleController
-{
+{   
+    private $databaseManager;
+
+    public function __construct(DatabaseManager $databaseManager)
+    {
+        $this->databaseManager = $databaseManager; 
+    }
     public function index()
     {
         // Load all required data
