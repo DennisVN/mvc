@@ -3,10 +3,14 @@ require 'View/includes/header.php';
 //require_once 'Controller/ArticleController.php';
 ?>
 
-
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Articles</li>
+    </ol>
+</nav>
 
 <section>
-    <p><a href="index.php">To home</a></p>
     <ul>
         <?php foreach ($articles as $article) : ?>
 
