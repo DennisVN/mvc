@@ -18,6 +18,8 @@ require 'Controller/ArticleController.php';
 $databaseManager = new DatabaseManager($config['host'], $config['user'], $config['password'], $config['dbname']);
 $databaseManager->connect();
 
+$articleController = new ArticleController($databaseManager);
+$rawArticles = $articleController->getArticles();
 // If nothing is specified, it will remain empty (home should be loaded)
 $page = $_GET['page'] ?? null;
 

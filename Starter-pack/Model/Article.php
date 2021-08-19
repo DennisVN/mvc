@@ -18,9 +18,9 @@ declare(strict_types=1);
         public function formatPublishDate($format = 'DD-MM-YYYY')
         {
             // TODO: return the date in the required format
-            $getDate = $this->publishDate;
+            /*$getDate = $this->publishDate;
             $setDate = date('DD-MM-YYYY');
-            return $setDate;
+            return $setDate;*/
             
         }
     }

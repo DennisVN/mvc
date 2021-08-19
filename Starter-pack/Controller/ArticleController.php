@@ -27,10 +27,12 @@ class ArticleController
         // TODO: prepare the database connection
         // Note: you might want to use a re-usable databaseManager class - the choice is yours
         // TODO: fetch all articles as $rawArticles (as a simple array)
-        $rawArticles = [];
+
         $sql= "SELECT * FROM mvc.articles";
-        $result = $this->databaseManager->connection->query($sql);
+        $result = $this->databaseManager->connection->query($sql)->fetchAll();
         $rawArticles = $result;
+        var_dump($rawArticle);
+        var_dump($rawArticles);
 
         $articles = [];
         return $result;
