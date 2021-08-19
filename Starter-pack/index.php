@@ -32,6 +32,6 @@ switch ($page) {
     case 'home':
     default:
         (new HomepageController($databaseManager))->index();
-       /* (new HomepageController($databaseManager))->index();*/
+
         break;
 }

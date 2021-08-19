@@ -15,7 +15,7 @@ class ArticleController
     public function index()
     {
         // Load all required data
-        $users = $this->getUsers();
+        $articles = $this->getArticles();
 
         // Load the view
         require 'View/articles/index.php';
@@ -26,7 +26,7 @@ class ArticleController
     }
 
     // Note: this function can also be used in a repository - the choice is yours
-    private function getUsers()
+    private function getArticles()
     {
         // TODO: prepare the database connection
         // Note: you might want to use a re-usable databaseManager class - the choice is yours
