@@ -19,24 +19,25 @@ class ArticleController
 
         // Load the view
         require 'View/articles/index.php';
-        $sql= "SELECT * FROM mvc.articles";
-        $result = $this->databaseManager->connect()->query($sql);
-
-        return $result;
     }
 
     // Note: this function can also be used in a repository - the choice is yours
-    private function getArticles()
+    public function getArticles()
     {
         // TODO: prepare the database connection
         // Note: you might want to use a re-usable databaseManager class - the choice is yours
         // TODO: fetch all articles as $rawArticles (as a simple array)
         $rawArticles = [];
+        $sql= "SELECT * FROM mvc.articles";
+        $result = $this->databaseManager->connection->query($sql);
+        $rawArticles = $result;
 
         $articles = [];
+        return $result;
         foreach ($rawArticles as $rawArticle) {
             // We are converting an article from a "dumb" array to a much more flexible class
             $articles[] = new Article($rawArticle['title'], $rawArticle['description'], $rawArticle['publish_date']);
+
         }
 
         return $articles;
