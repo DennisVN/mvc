@@ -1,4 +1,7 @@
-<?php require 'View/includes/header.php'?>
+<?php 
+require 'View/includes/header.php';
+require_once 'Controller/ArticleController.php';
+?>
 
 
 <section>
@@ -6,7 +9,7 @@
 
     <ul>
         <?php foreach ($articles as $article) : ?>
-            <li><?= $article['title'] ?> </li>
+            <li><?= $article['title'] ?> <?= $article['publish_date'] ?></li>
         <?php endforeach; ?>
     </ul>
 </section>

@@ -31,18 +31,15 @@ class ArticleController
         $sql= "SELECT * FROM mvc.articles";
         $result = $this->databaseManager->connection->query($sql)->fetchAll();
         $rawArticles = $result;
-        var_dump($rawArticle);
-        var_dump($rawArticles);
+        //var_dump($rawArticles);
 
         $articles = [];
-        return $result;
         foreach ($rawArticles as $rawArticle) {
             // We are converting an article from a "dumb" array to a much more flexible class
             $articles[] = new Article($rawArticle['title'], $rawArticle['description'], $rawArticle['publish_date']);
-
+            var_dump($rawArticle['publish_date']);
         }
-
-        return $articles;
+        var_dump($articles) ;
     }
 
     public function show()
