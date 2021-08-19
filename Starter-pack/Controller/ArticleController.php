@@ -34,7 +34,7 @@ class ArticleController
         $result = $this->databaseManager->connection->query($sql)->fetchAll();
         $rawArticles = $result;
         //var_dump($rawArticles);
-
+        
         $articles = [];
         foreach ($rawArticles as $rawArticle) {
             // We are converting an article from a "dumb" array to a much more flexible class
@@ -47,5 +47,7 @@ class ArticleController
     public function show()
     {
         // TODO: this can be used for a detail page
+        require_once 'show.php';
+        var_dump($article);
     }
 }

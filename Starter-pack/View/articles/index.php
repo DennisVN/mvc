@@ -8,7 +8,7 @@ require_once 'Controller/ArticleController.php';
     <p><a href="index.php">To home</a></p>
     <ul>
         <?php foreach ($articles as $article) : ?>
-            <li><?= $article->title ?> <?= $article->publishDate ?></li>
+            <li><a href="index.php?show="><?= $article->title ?></a><?= $article->publishDate ?></li>
         <?php endforeach; ?>
     </ul>
 </section>
