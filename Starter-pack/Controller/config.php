@@ -8,5 +8,5 @@ $config = [
     'host' => 'localhost',
     'user' => 'root',
     'password' => 'root',
-    'dbname' => 'articles',
+    'dbname' => 'mvc',
 ];

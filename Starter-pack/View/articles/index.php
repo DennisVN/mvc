@@ -1,6 +1,17 @@
+<?php require 'config.php'?>
 <?php require 'View/includes/header.php'?>
+<?php 
+ini_set('display_errors', '1');
+ini_set('display_startup_errors', '1');
+error_reporting(E_ALL);
+?>
 
-<?php // Use any data loaded in the controller here ?>
+
+
+<?php 
+$databaseManager = new DatabaseManager($config['host'], $config['user'], $config['password'], $config['dbname']);
+$databaseManager->connect;
+?>
 
 <section>
     <p><a href="index.php">To home</a></p>
