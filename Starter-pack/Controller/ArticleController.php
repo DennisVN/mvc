@@ -44,10 +44,16 @@ class ArticleController
         return $articles ;
     }
 
-    public function show()
+    public function show($articleTitle)
     {
+
+        $sql= "SELECT * FROM mvc.articles WHERE title = '".$articleTitle."'";
+        $result = $this->databaseManager->connection->query($sql)->fetchAll();
+        $showArticle = new Article($result[0]['title'], $result[0]['description'], $result[0]['publish_date']);
         // TODO: this can be used for a detail page
-        require_once 'show.php';
-        var_dump($article);
+
+
+        require_once 'View/articles/show.php';
+        return $result;
     }
 }
