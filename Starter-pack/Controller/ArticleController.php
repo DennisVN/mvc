@@ -19,6 +19,10 @@ class ArticleController
 
         // Load the view
         require 'View/articles/index.php';
+        $sql= "SELECT * FROM mvc.articles";
+        $result = $this->databaseManager->connect()->query($sql);
+
+        return $result;
     }
 
     // Note: this function can also be used in a repository - the choice is yours
