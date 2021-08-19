@@ -14,6 +14,7 @@ require 'Controller/DatabaseManager.php';
 require 'Controller/HomepageController.php';
 require 'Controller/ArticleController.php';
 
+
 // Get the current page to load
 $databaseManager = new DatabaseManager($config['host'], $config['user'], $config['password'], $config['dbname']);
 $databaseManager->connect();
@@ -30,6 +31,8 @@ switch ($page) {
         // $articleController = new ArticleController;
         // $articleController->index();
         (new ArticleController($databaseManager))->index();
+        var_dump((new ArticleController($databaseManager))->index());
+
         break;
     case 'home':
     default:
@@ -37,3 +40,4 @@ switch ($page) {
 
         break;
 }
+

@@ -8,7 +8,7 @@ declare(strict_types=1);
         public ?string $description;
         public ?string $publishDate;
 
-        public function __construct(string $title, ?string $description, ?string $publishDate)
+        public function __construct(string $title, ?string $description, ?string $publishDate=('DD-MM-YYYY'))
         {
             $this->title = $title;
             $this->description = $description;

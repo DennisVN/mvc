@@ -16,9 +16,11 @@ class ArticleController
     {
         // Load all required data
         $articles = $this->getArticles();
-
+        //var_dump($articles);
+        //var_dump('shibby');
         // Load the view
         require 'View/articles/index.php';
+
     }
 
     // Note: this function can also be used in a repository - the choice is yours
@@ -37,9 +39,9 @@ class ArticleController
         foreach ($rawArticles as $rawArticle) {
             // We are converting an article from a "dumb" array to a much more flexible class
             $articles[] = new Article($rawArticle['title'], $rawArticle['description'], $rawArticle['publish_date']);
-            var_dump($rawArticle['publish_date']);
+            //var_dump($rawArticle['publish_date']);
         }
-        var_dump($articles) ;
+        return $articles ;
     }
 
     public function show()
