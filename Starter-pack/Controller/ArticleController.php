@@ -47,6 +47,7 @@ class ArticleController
     public function show($articleTitle)
     {
 
+
         $sql= "SELECT * FROM mvc.articles WHERE title = '".$articleTitle."'";
         $result = $this->databaseManager->connection->query($sql)->fetchAll();
         $showArticle = new Article($result[0]['title'], $result[0]['description'], $result[0]['publish_date']);

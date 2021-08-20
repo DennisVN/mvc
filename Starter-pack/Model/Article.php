@@ -15,11 +15,11 @@ declare(strict_types=1);
             $this->publishDate = $publishDate;
         }
 
-        public function formatPublishDate()
+        public function formatPublishDate() : string
         {
             // TODO: return the date in the required format
             $publishDate = $this->publishDate;
-            $formattedDate = date("d.m.Y", strtotime("DD-MM-YYYY"));
-            return $formattedDate;
+            $formattedDate = new DateTime($publishDate);
+            return $formattedDate->format("F j, Y");
         }
     }
