@@ -13,11 +13,12 @@
 
 </head>
 <style>
-    .breadcrumbs {color: pink;}
+    body {background-color: pink;}
+    p {padding : 5px; font-size: 2rem;}
 </style>
 <body class="text-center">
 
 
     <header>
-        <h1><?= $_GET['show'] ?? "Welcome to my site" ?></h1>
+        <h1><?= $_GET['show'] ?? "WikiPhobia" ?></h1>
     </header>

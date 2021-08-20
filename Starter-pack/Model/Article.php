@@ -8,17 +8,18 @@ declare(strict_types=1);
         public ?string $description;
         public ?string $publishDate;
 
-        public function __construct(string $title, ?string $description, ?string $publishDate=('DD-MM-YYYY'))
+        public function __construct(string $title, ?string $description, ?string $publishDate)
         {
             $this->title = $title;
             $this->description = $description;
             $this->publishDate = $publishDate;
         }
 
-        /*public function formatPublishDate()
+        public function formatPublishDate()
         {
             // TODO: return the date in the required format
-            return $this->publishDate;
-            
-        }*/
+            $publishDate = $this->publishDate;
+            $formattedDate = date("d.m.Y", strtotime("DD-MM-YYYY"));
+            return $formattedDate;
+        }
     }

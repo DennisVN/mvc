@@ -2,7 +2,7 @@
 require 'View/includes/header.php';
 //require_once 'Controller/ArticleController.php';
 ?>
-
+<style> </style>
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb justify-content-center">
         <li class="breadcrumb-item"><a href="index.php">Home</a></li>
@@ -10,11 +10,11 @@ require 'View/includes/header.php';
     </ol>
 </nav>
 
-<section class="text-center">
+<section class="text-center" style="font-size: 1.8rem" >
     <ul>
         <?php foreach ($articles as $article) : ?>
 
-            <li><a href="index.php?page=article&show=<?=$article->title?>"><?= $article->title ?></a><?= $article->publishDate ?></li>
+            <li><a href="index.php?page=article&show=<?=$article->title?>"><?= $article->title ?></a><?= $article->formatPublishDate(); ?></li>
 
         <?php endforeach; ?>
     </ul>

@@ -6,6 +6,7 @@
     <p><a href="index.php?page=articles">To articles page</a></p>
 
     <p >We were too scared to fill this section in ... Check out the articles tho ! </p>
+    <img src="images/frontpagenews.png" alt="Flowers in Chania"> 
 </section>
 
 <?php require 'View/includes/footer.php'?>

@@ -1,6 +1,9 @@
 <?php
 require 'View/includes/header.php';
 ?>
+<style>
+    ul.breadcrumb {background-color: pink;}
+</style>
 <nav aria-label="breadcrumb justify-content-center">
     <ol class="breadcrumb justify-content-center">
         <li class="breadcrumb-item"><a href="index.php">Home</a></li>
