@@ -4,13 +4,13 @@ require 'View/includes/header.php';
 ?>
 
 <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
+    <ol class="breadcrumb justify-content-center">
         <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Articles</li>
+        <li class="breadcrumb-item active" aria-current="page" >Articles</li>
     </ol>
 </nav>
 
-<section>
+<section class="text-center">
     <ul>
         <?php foreach ($articles as $article) : ?>
 

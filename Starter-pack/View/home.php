@@ -2,10 +2,10 @@
 
 <?php // Use any data loaded in the controller here ?>
 
-<section>
+<section class="text-center">
     <p><a href="index.php?page=articles">To articles page</a></p>
 
-    <p>Put your content here.</p>
+    <p >We were too scared to fill this section in ... Check out the articles tho ! </p>
 </section>
 
 <?php require 'View/includes/footer.php'?>

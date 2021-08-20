@@ -1,8 +1,8 @@
 <?php
 require 'View/includes/header.php';
 ?>
-<nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
+<nav aria-label="breadcrumb justify-content-center">
+    <ol class="breadcrumb justify-content-center">
         <li class="breadcrumb-item"><a href="index.php">Home</a></li>
         <li class="breadcrumb-item"><a href="index.php?page=articles">Articles</a></li>
         <li class="breadcrumb-item active" aria-current="page"><?= $showArticle->title?></li>
@@ -14,4 +14,3 @@ require 'View/includes/header.php';
 <article>
     <p><?= $showArticle->description?></p>
 </article>
-

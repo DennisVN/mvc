@@ -1,4 +1,4 @@
-    <footer>
+    <footer class="text-center">
         &copy; BeCode <?php echo date('Y')?>
     </footer>
 </body>
