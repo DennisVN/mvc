@@ -15,16 +15,11 @@ declare(strict_types=1);
             $this->publishDate = $publishDate;
         }
 
-        public function formatPublishDate() : string
+        public function formatPublishDate() :string
         {
             // TODO: return the date in the required format
             $publishDate = $this->publishDate;
-<<<<<<< HEAD
-            $formattedDate = new date(("Y-m-d"),($this->publishDate));
-            echo $formattedDate;
-=======
             $formattedDate = new DateTime($publishDate);
             return $formattedDate->format("F j, Y");
->>>>>>> b0d511979be0d81fc344648ddc48c0440d0625ed
         }
     }
