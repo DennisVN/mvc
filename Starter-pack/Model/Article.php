@@ -19,7 +19,7 @@ declare(strict_types=1);
         {
             // TODO: return the date in the required format
             $publishDate = $this->publishDate;
-            $formattedDate = date("d.m.Y", strtotime("DD-MM-YYYY"));
-            return $formattedDate;
+            $formattedDate = new date(("Y-m-d"),($this->publishDate));
+            echo $formattedDate;
         }
     }
